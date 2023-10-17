@@ -1,0 +1,247 @@
+/*página principal e elementos em comum*/
+
+html, body{
+    height: 100%; /*garante que o conteúdo ocupará toda a página*/
+}
+
+body { /*estilização da fonte e cor de fundo utilizada pela página*/
+    margin: 0;
+	font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(#509e6e, #fcfcfc);
+}
+
+header {/*estilização do cabeçalho*/
+	background: #589670;
+	padding: 40px 0;
+}
+
+
+nav {
+    display: flex; /* utilizado flexbox para o menu */
+    justify-content: flex-end; /* alinha itens a direita horizontalmente */
+    align-items: center; /* centraliza os itens verticalmente */
+    padding: 10px; 
+    margin-right: 20px;
+    
+}
+
+nav li {
+	display: inline; /*inline para que o menu seja horizontal */
+	margin: 0 0 0 15px;
+}
+
+nav a {/*estilização dos itens do menu*/
+	text-transform: uppercase; /*letras maiúsculas*/
+	color: #000000; /*cor da fonte*/
+	font-weight: bold; /*negrito*/
+	font-size: 22px; /*tamanho da fonte*/
+	text-decoration: none; /*sem decorações adicionais como sublinhado*/
+}
+
+nav a:hover {/*estilização para quando o mouse passa sobre os menus*/
+	color: #6dda41;
+	text-decoration: underline;
+}
+
+
+.principal{/*estilização do conteúdo principal da página sobre - foto + texto*/
+    width: 1200px;
+    margin: 0 auto; /*centraliza div*/
+    display: flex; /* utilizado flexbox para alinhamento horizontal */
+    justify-content: center; /* justififca elementos no centro */
+    align-items: center; /* centraliza os itens verticalmente */
+    padding: 10px;
+}
+
+.principal p { /*estilização dos parágrafos do conteúdo principal*/
+	margin: 0 0 1em; 
+}
+
+.titulo-principal { /*estilização do título principal das páginas*/
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+}
+
+img{ /*estilização da imagem utilizada - possível criar classe específica caso seja utilizada mais imagens no futuro*/
+    margin: 50px;
+}
+
+footer {/*estilização do rodapé*/
+    position: fixed; /*fixa rodapé no final da página e estiliza*/
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  footer img{/*estilização dos ícones do rodapé*/
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    margin: 0 5px;
+  }
+
+  #github{ /*alteração específica do tamanho do ícone github, devido a não ter ficado proporcional com 40px*/
+    width: 37px;
+    height: 37px;
+  }
+  
+  .copyright {/*estilização do texto de copyright*/
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+/*estilos para a pagina formação e projetos*/
+
+.habilidades{ /*define margem para todoo conteúdo englobado pela seção habilidades*/
+    margin: 50px;
+}
+.secundario {/*define padding para cada uma das seções secundárias*/
+    padding: 20px;
+}
+
+.secundario h2 {/*estiliza os títulos h2 das seções secundárias*/
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.lista {/*define estilo da lista das formaçẽos*/
+    list-style: none;
+    padding: 0;
+}
+
+.formacao-item {/*define margem para cada item da lista*/
+    margin-bottom: 20px;
+}
+
+.formacao-data {/*deixa data do curso em negrito*/
+    font-weight: bold;
+}
+
+.titulo {/*estiliza nome dos cursos*/
+    font-weight: bold;
+}
+
+.descricao {/*estiliza a descrição de cada item da formação*/
+    margin-top: 5px;
+}
+
+
+/*página contato*/
+
+form {
+	margin: 40px 0;
+}
+
+/*estiliza os inputs utilizados no form, destaque para display block para cada um ocupar sua própria linha */
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 90%;
+}
+
+/*estiliza a seção contato que engloba título "Contato" e o formulário em si*/
+.contato {
+	padding: 3em 0;
+	width: 800px;
+	margin: 0 auto;
+}
+
+/*estiliza o botão enviar*/
+.botao{
+    padding: 10px 25px;
+    margin: 0 auto;
+}
+
+/*estilização para permitir responsividade e visualização apropriada em celulares*/
+/*define alteração assim que a tela for menor que 1200px*/
+@media screen and (max-width: 1200px) {
+    body{
+        margin: 0;
+        background: linear-gradient(#BBBBBB, #fefefe);
+        background-size: cover;
+        background-repeat: no-repeat; 
+        /*as últimas propriedades evitam que navegador do celular recomeçe o gradiente, criando um único gradiente do começo ao fim*/
+    }
+	.principal{
+        /*define a largura do conteúdo principal em 80%, notação em px não é mais apropriada nesse caso*/
+		width: 80%;
+	}
+
+    /*Centraliza título*/
+	h1 {
+		text-align: center;
+	}
+
+    /*aleração para um menu centralizado para celulares*/
+	nav {
+        width: 80%;
+        display: flex; /* utilizado flexbox para o menu */
+        justify-content: flex-center; /* centraliza menu */
+        align-items: center; /* centraliza os itens verticalmente */
+        padding: 10px; 
+        margin-right: 20px;
+    }
+
+    nav a {/*estilização dos itens do menu, diminuição da fonte*/
+        text-transform: uppercase;
+        color: #000000;
+        font-weight: bold;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    /*alteração do conteúdo para coluna, o texto aparece abaixo da foto*/
+	.principal{
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    /*largura automática para se adaptar a nova tela*/
+    img { 
+        width: auto;
+        margin: 20px 0;
+    }
+
+    /*nova margem para a seção sobre, para não ficar grudado nas laterais do celular*/
+    .sobre{
+        margin: 20px;
+    }
+    
+    /*adaptação da largura da seção contato para medias menores*/
+    .contato {
+        padding: 3em 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    footer {/*estilização do rodapé, texo sobre se expandirá para além do fim da tela, nesse caso um rodapé relativo é melhor que o fixo*/
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 6px;
+        text-align: center;
+      }
+
+    /*mantém rodaé fixo apenas para página projetos*/
+    #rodape-projetos{
+        position: absolute;
+        bottom: 0;
+    }
+
+    /*estilização da margem da página de formação para telas menores/celulares*/
+    .habilidades{
+        margin: 5%;
+    }
+    
+}
+

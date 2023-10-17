@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Erick Honorio</title>
+</head>
+<body>
+
+     <!--cabeçalho, mesmo utilizado em todas as páginas, ver index.html-->
+    <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">SOBRE</a></li>
+                    <li><a href="formacao.html">FORMAÇÃO</a></li>
+                    <li><a href="projetos.html">PROJETOS</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+    </header>
+    
+    <!--seção que englobará todo o formulário de contato-->
+    <section class="contato">
+        <h1 class="titulo-principal">Contato</h1>
+        <p>Tem alguma pergunta? Escreva abaixo e entrarei em contato o mais rápido possível!</p>
+    
+        <!--utilizado form para contato com as tags input e textarea-->
+        <!--criada classe input-padrao para agrupar elementos que possuirão mesma formatação-->
+        <form action="">
+            <input type="text" placeholder="Nome" class="input-padrao">
+            <br>
+            <input type="text" placeholder="Email" class="input-padrao">
+            <br>
+            <textarea name="" placeholder="Mensagem" cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+            <!--required exige que o campo seja preenchido-->
+            <br>
+            <input type="submit" name = "Enviar" value="Enviar" class="botao">
+        </form>
+    </section>
+
+    <!--rodabé, ícones github e email assim como copyright-->
+    <footer>
+        <a href="https://github.com/erickhonorio5"><img src="github.png" alt="" id = "github"></a>
+        <img src="email.png" alt="">
+        <br>
+        <p class="copyright"> Erick Honorio &copy;2023</p>
+    </footer>
+</body>
+</html>
